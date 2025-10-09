@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/Profilesettings.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="account-settings">
+      <header class="navbar-w-account-frame">
+        <div class="navbar-w-account5">
+          <div class="logo-frame">
+            <div class="logo3" id="logo">
+              <img
+                class="shape-30-icon20"
+                loading="lazy"
+                alt=""
+                src="./public/shape30.svg"
+              />
+
+              <div class="mintbank14">MintBank</div>
+            </div>
+          </div>
+          <nav class="buttons-container-container">
+            <nav class="buttons-container6">
+              <div id="home" class="text-button127" style="cursor: pointer;">Home</div>
+              <div id="about" class="text-button128" style="cursor: pointer;">About</div>
+              <div id="help" class="text-button129" style="cursor: pointer;">Help</div>
+              <div id="security" class="text-button131" style="cursor: pointer;">Security</div>
+            </nav>
+          </nav>
+          <div class="buttons-container7">
+            <img
+              id="profileImage"
+              class="profile-icon5"
+              loading="lazy"
+              alt=""
+              src="./public/profile@2x.png"
+            />
+
+            <img
+              class="notification-icon5"
+              loading="lazy"
+              alt=""
+              src="./public/notification@2x.png"
+            />
+
+            <button class="button92" id="logoutb">
+              <div class="text71">Log Out</div>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="heading-wrapper3">
+        <h1 class="heading38">Settings</h1>
+      </div>
+      <main class="container55">
+        <div class="buttons">
+          <div class="first-option">
+            <div class="text-button132">Profile</div>
+          </div>
+          <div class="divider3">
+            <div class="line-wrapper1">
+              <div class="line36"></div>
+            </div>
+            <div class="line37"></div>
+          </div>
+        </div>
+        <div class="container-item"></div>
+        <section id="profileForm" class="user-info-wrapper">
+          <div class="user-info1">
+            <div class="user-and-options">
+              <div class="profile-and-settings">
+                <div class="profile-settings">
+                  <h2 class="text-button133">Profile</h2>
+                </div>
+                <div class="profile-image">
+                  <div class="profile-picture-shape-parent">
+                    <div class="profile-picture-shape"></div>
+                    <img
+                    id="pfp"
+                      class="blank-profile-picture-973460-1-icon3"
+                      loading="lazy"
+                      alt=""
+                      src="./public/blankprofilepicture973460-1280-cropped-11@2x.png"
+                    />
+                  </div>
+                </div>
+                <div class="profile-settings1">
+                  <h2 id="USERNAME" class="text-button134">UserName</h2>
+                </div>
+                <div class="account-actions">
+                  <input type="file" id="avatarUpload" style="display: none;" accept="image/*" />
+                  <label for="avatarUpload" class="button93">
+                  <div class="button-labels">Upload Avatar</div>
+                  </label>
+                  <img id="avatarPreview" src="" alt="Avatar Preview" style="display: none; width: 100px; height: 100px; margin-top: 10px;"/>
+                  <button id="removepfp" class="button94">
+                    <div class="text72">Remove Avatar</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <img class="line-icon" loading="lazy" alt="" />
+
+            <form class="lower-content">
+              <div class="content-options">
+                <div class="second-option">
+                  <h2 class="text-button135">Basic Info</h2>
+                </div>
+                <div class="third-option">
+                  <div class="third-button-container">
+                    <div class="text-button136" id="cancel1">Cancel</div>
+                  </div>
+                  <button class="button95" onclick="uploadPfp()">
+                    <div class="action-button-label2">Save</div>
+                  </button>
+                </div>
+              </div>
+              <div class="form-container1">
+                <div class="form-divider"></div>
+                <div class="input-fields3">
+                  <div class="container56">
+                    <div class="sub-container17">
+                      <div class="input-field19">
+                        <input id="name"
+                          class="field-labels"
+                          type="text"
+                        />
+                      </div>
+                      <div class="input-field20">
+                        <input id="lastname"
+                          class="extra-labels"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div class="sub-container18">
+                      <div class="input-field21">
+                        <input
+                        id="email"
+                          class="text73"
+                          type="text"
+                        />
+                      </div>
+                      <div class="input-field22">
+                        <input
+                        id="username"
+                          class="text74"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div class="sub-container19">
+                      <div class="input-field23">
+                        <input
+                        id="address"
+                          class="text75"
+                          placeholder="Adress"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                    <div class="sub-container20">
+                      <div class="input-field24">
+                        <input
+                        id="countrycode"
+                          class="text77"
+                          type="text"
+                        />
+                      </div>
+                      <div class="input-field25">
+                        <input
+                        id="phone"
+                          class="text77"
+                          type="text"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-actions">
+                  <div class="text-button137">Security</div>
+                  <div class="action-divider"></div>
+                </div>
+                <div class="container57">
+                  <div class="sub-container21">
+                    <div class="input-field23">
+                      <input
+                      id="password"
+                        class="text75"
+                        placeholder="Enter a new Password"
+                        type="password"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="page-actions">
+                <div class="fourth-option">
+                  <div class="text-button138" id="cancel2">Cancel</div>
+                </div>
+                <button class="button96">
+                  <div class="action-label1">Save</div>
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="page-footer">
+          <div class="footer-section7">
+            <div class="footer-section-inner4">
+              <div class="shape-30-parent7" id="logof">
+                <img
+                  class="shape-30-icon21"
+                  loading="lazy"
+                  alt=""
+                  src="./public/shape30.svg"
+                />
+
+                <div class="mintbank-wrapper4">
+                  <div class="mintbank15">MintBank</div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-section-inner5">
+              <div class="text-button-parent7">
+                <div id="homef" class="text-button139" style="cursor: pointer;">Home</div>
+                <div id="aboutf" class="text-button140" style="cursor: pointer;">About</div>
+                <div id="helpf" class="text-button141" style="cursor: pointer;">Help</div>
+                <div id="securityf" class="text-button143" style="cursor: pointer;">Security</div>
+              </div>
+            </div>
+            <div class="line38"></div>
+            <div class="footer-section-inner6">
+              <div class="button-parent4">
+                <div class="button97">
+                  <div class="icon-wrapper16">
+                    <img
+                      class="icon100"
+                      loading="lazy"
+                      alt=""
+                      src="./public/icon.svg"
+                    />
+                  </div>
+                  <div class="text-button144">MintBank@gmail.com</div>
+                </div>
+                <div class="button98">
+                  <div class="icon-wrapper17">
+                    <img
+                      class="icon101"
+                      loading="lazy"
+                      alt=""
+                      src="./public/icon1.svg"
+                    />
+                  </div>
+                  <div class="text-button145">+213 91813 23 2309</div>
+                </div>
+                <div class="button99">
+                  <div class="icon-wrapper18">
+                    <img
+                      class="icon102"
+                      loading="lazy"
+                      alt=""
+                      src="./public/icon2.svg"
+                    />
+                  </div>
+                  <div class="text-button146">ALGER_CENTRE</div>
+                </div>
+              </div>
+            </div>
+            <div class="line39"></div>
+            <footer class="container58">
+              <div class="button-parent5">
+                <div class="button100">
+                  <img
+                    class="icon103"
+                    loading="lazy"
+                    alt=""
+                    src="./public/icon3.svg"
+                  />
+                </div>
+                <div class="button101">
+                  <img
+                    class="icon104"
+                    loading="lazy"
+                    alt=""
+                    src="./public/icon4.svg"
+                  />
+                </div>
+                <div class="button102">
+                  <img
+                    class="icon105"
+                    loading="lazy"
+                    alt=""
+                    src="./public/icon5.svg"
+                  />
+                </div>
+              </div>
+              <div class="text-wrapper2">
+                <div class="text78">MintBank All Rights Reserved</div>
+              </div>
+              <div class="container-inner4">
+                <div class="text-button-parent8">
+                  <div class="text-button147">Privacy Policy</div>
+                  <div class="line40"></div>
+                  <div class="text-button148">Terms of Service</div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+      import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyBS-E-W1L3XK7stlVsS1c02FRzCBSA1zsE",
+          authDomain: "pfep-9ded1.firebaseapp.com",
+          projectId: "pfep-9ded1",
+          storageBucket: "pfep-9ded1.appspot.com",
+          messagingSenderId: "333176142301",
+          appId: "1:333176142301:web:afced671374fc979e35e34"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+    
+      window.addEventListener('load', () => {
+          console.log('Window loaded and Firebase initialized');
+    
+          document.getElementById('logoutb').addEventListener('click', async () => {
+              console.log('Logout button clicked');
+              try {
+                  await signOut(auth);
+                  console.log('User signed out successfully');
+                  window.location.href = 'index.html';
+              } catch (error) {
+                  console.error('Error signing out: ', error);
+                  alert('Error logging out');
+              }
+          });
+      });
+    </script>
+        <script>
+document.getElementById("home").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("about").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("help").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("security").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+
+        document.getElementById("homef").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("aboutf").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("helpf").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("securityf").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+
+        var profileImage = document.getElementById("profileImage");
+      if (profileImage) {
+        profileImage.addEventListener("click", function (e) {
+          window.location.href = "Account.html";
+        });
+      }
+
+      document.getElementById("logo").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("logof").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("cancel1").addEventListener("click", function() {
+            window.location.href = "Profilesettings.html";
+        });
+        document.getElementById("cancel2").addEventListener("click", function() {
+            window.location.href = "Profilesettings.html";
+        });
+        </script>
+
+
+    
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-storage-compat.js"></script>
+    <!-- Load your profile.js file after Firebase SDK -->
+    <script src="Scripts/accountettings.js"></script>
+  </body>
+</html>

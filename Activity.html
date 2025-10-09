@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/Activity.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+  </head>
+  <body>
+    <div class="activity-page-desktop">
+      <section class="main-content3">
+        <div class="page-body">
+          <header class="navbar-w-account-container">
+            <div class="navbar-w-account2">
+              <div class="navbar-items">
+                <div class="shape-30-container" id="frameContainer">
+                  <img
+                    class="shape-30-icon8"
+                    loading="lazy"
+                    alt=""
+                    src="./public/shape30.svg"
+                  />
+
+                  <div class="brand-logo-container">
+                    <div class="mintbank8">MintBank</div>
+                  </div>
+                </div>
+              </div>
+              <nav class="page-options">
+                <nav class="options-bar">
+                  <div class="text-button65" id="textButton">Home</div>
+                  <div class="text-button66" id="textButton1">About</div>
+                  <div class="text-button67" id="textButton2">Help</div>
+                  <div class="text-button69" id="textButton4">Security</div>
+                </nav>
+              </nav>
+              <div class="profile-parent">
+                <img
+                  class="profile-icon2"
+                  loading="lazy"
+                  alt=""
+                  src="./public/profile@2x.png"
+                  id="profileImage"
+                />
+
+                <img
+                  class="notification-icon2"
+                  loading="lazy"
+                  alt=""
+                  src="./public/notification@2x.png"
+                  id="notificationImage"
+                />
+
+                <button class="button54">
+                  <div class="action-button" id="logoutb">Log Out</div>
+                </button>
+              </div>
+            </div>
+          </header>
+          <div class="search-bar">
+            <div class="search-input">
+              <img
+                class="screenshot-2024-04-21-at-16-03"
+                loading="lazy"
+                alt=""
+                src="./public/screenshot-20240421-at-160336-search-icon--free-png--svg-6805040--noun-project-1@2x.png"
+              />
+
+              <div class="input-field-container">
+                <div class="input-field11">
+                  <input id="filterbyuser"
+                    class="text37"
+                    placeholder="Search by Username "
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container37" id="user-data">
+            <div class="table-1">
+              <div class="table">
+                <div class="row">
+                  <button class="cell">
+                    <div class="content1">
+                      <div class="column-titles">Date</div>
+                    </div>
+                  </button>
+                  <button class="cell1">
+                    <div class="content2">
+                      <div class="text38">Type</div>
+                    </div>
+                  </button>
+                  <button class="cell2">
+                    <div class="content3">
+                      <div class="text39">Name</div>
+                    </div>
+                  </button>
+                  <button class="cell4">
+                    <div class="content5">
+                      <div class="text41">Amount</div>
+                    </div>
+                  </button>
+                  <button class="cell6">
+                    <div class="content7">
+                      <div class="text43">Action</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="no-transactions-yet">No transactions yet.</div>
+          </div>
+        </div>
+      </section>
+      <section class="footer-section4">
+        <div class="footer-content2">
+          <div class="footer-branding" id="footerBrandingContainer">
+            <img class="shape-30-icon9" alt="" src="./public/shape30.svg" />
+
+            <div class="footer-brand-name-container">
+              <div class="mintbank9">MintBank</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-navigation1">
+          <div class="footer-nav-buttons">
+            <div class="text-button70" id="textButton5">Home</div>
+            <div class="text-button71" id="textButton6">About</div>
+            <div class="text-button72" id="textButton7">Help</div>
+            <div class="text-button74" id="textButton9">Security</div>
+          </div>
+        </div>
+        <div class="line25"></div>
+        <div class="footer-actions2">
+          <div class="action-buttons3">
+            <div class="button55">
+              <div class="button-icons">
+                <img
+                  class="icon82"
+                  loading="lazy"
+                  alt=""
+                  src="./public/icon.svg"
+                />
+              </div>
+              <div class="text-button75">MintBank@gmail.com</div>
+            </div>
+            <div class="button56">
+              <div class="icon-wrapper9">
+                <img class="icon83" alt="" src="./public/icon1.svg" />
+              </div>
+              <div class="text-button76">+213 91813 23 2309</div>
+            </div>
+            <div class="button57">
+              <div class="icon-wrapper10">
+                <img class="icon84" alt="" src="./public/icon2.svg" />
+              </div>
+              <div class="text-button77">ALGER_CENTRE</div>
+            </div>
+          </div>
+        </div>
+        <div class="line26"></div>
+        <footer class="container38">
+          <div class="social-media-icons1">
+            <button class="button58">
+              <img class="icon85" alt="" src="./public/icon3.svg" />
+            </button>
+            <button class="button59">
+              <img class="icon86" alt="" src="./public/icon4.svg" />
+            </button>
+            <button class="button60">
+              <img class="icon87" alt="" src="./public/icon5.svg" />
+            </button>
+          </div>
+          <div class="copyright3">
+            <div class="text44">MintBank All Rights Reserved</div>
+          </div>
+          <div class="legal-links1">
+            <div class="footer-nav-links">
+              <div class="text-button78">Privacy Policy</div>
+              <div class="link-divider1"></div>
+              <div class="text-button79">Terms of Service</div>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+      import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyBS-E-W1L3XK7stlVsS1c02FRzCBSA1zsE",
+          authDomain: "pfep-9ded1.firebaseapp.com",
+          projectId: "pfep-9ded1",
+          storageBucket: "pfep-9ded1.appspot.com",
+          messagingSenderId: "333176142301",
+          appId: "1:333176142301:web:afced671374fc979e35e34"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+    
+      window.addEventListener('load', () => {
+          console.log('Window loaded and Firebase initialized');
+    
+          document.getElementById('logoutb').addEventListener('click', async () => {
+              console.log('Logout button clicked');
+              try {
+                  await signOut(auth);
+                  console.log('User signed out successfully');
+                  window.location.href = 'index.html';
+              } catch (error) {
+                  console.error('Error signing out: ', error);
+                  alert('Error logging out');
+              }
+          });
+      });
+    </script>
+
+    <script>
+      var frameContainer = document.getElementById("frameContainer");
+      if (frameContainer) {
+        frameContainer.addEventListener("click", function (e) {
+          window.location.href = "index.html";
+        });
+      }
+      
+      var textButton = document.getElementById("textButton");
+      if (textButton) {
+        textButton.addEventListener("click", function (e) {
+          window.location.href = "index.html";
+        });
+      }
+      
+      var textButton1 = document.getElementById("textButton1");
+      if (textButton1) {
+        textButton1.addEventListener("click", function (e) {
+          window.location.href = "About.html";
+        });
+      }
+      
+      var textButton2 = document.getElementById("textButton2");
+      if (textButton2) {
+        textButton2.addEventListener("click", function (e) {
+          window.location.href = "Help.html";
+        });
+      }
+      
+      
+      var textButton4 = document.getElementById("textButton4");
+      if (textButton4) {
+        textButton4.addEventListener("click", function (e) {
+          window.location.href = "Security.html";
+        });
+      }
+      
+      var profileImage = document.getElementById("profileImage");
+      if (profileImage) {
+        profileImage.addEventListener("click", function (e) {
+          window.location.href = "Account.html";
+        });
+      }
+      
+      var footerBrandingContainer = document.getElementById(
+        "footerBrandingContainer"
+      );
+      if (footerBrandingContainer) {
+        footerBrandingContainer.addEventListener("click", function (e) {
+          window.location.href = "index.html";
+        });
+      }
+      
+      var textButton5 = document.getElementById("textButton5");
+      if (textButton5) {
+        textButton5.addEventListener("click", function (e) {
+          window.location.href = "index.html";
+        });
+      }
+      
+      var textButton6 = document.getElementById("textButton6");
+      if (textButton6) {
+        textButton6.addEventListener("click", function (e) {
+          window.location.href = "About.html";
+        });
+      }
+      
+      var textButton7 = document.getElementById("textButton7");
+      if (textButton7) {
+        textButton7.addEventListener("click", function (e) {
+          window.location.href = "Help.html";
+        });
+      }
+      
+      var textButton8 = document.getElementById("textButton8");
+      if (textButton8) {
+        textButton8.addEventListener("click", function (e) {
+          window.location.href = "Services.html";
+        });
+      }
+      
+      var textButton9 = document.getElementById("textButton9");
+      if (textButton9) {
+        textButton9.addEventListener("click", function (e) {
+          window.location.href = "Security.html";
+        });
+      }
+      </script>
+      <script src="Scripts/Activity.js"></script>
+  </body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/Login.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  </head>
+  <body>
+    <div class="login-page-desktop">
+      <section class="content-wrapper-wrapper">
+        <div class="content-wrapper">
+          <header class="navbar1">
+            <div class="navigation-inner-wrapper">
+              <div class="navigation-inner" id="navigationInnerContainer">
+                <img
+                  class="shape-30-icon6"
+                  loading="lazy"
+                  alt=""
+                  src="./public/shape30.svg"
+                />
+
+                <div class="logo-wrapper1">
+                  <div class="mintbank6">MintBank</div>
+                </div>
+              </div>
+            </div>
+            <nav class="navigation-buttons-wrapper">
+              <nav class="navigation-buttons">
+                <div class="text-button48" id="home">Home</div>
+                <div class="text-button49" id="about">About</div>
+                <div class="text-button50" id="help">Help</div>
+                <div class="text-button52" id="security">Security</div>
+              </nav>
+            </nav>
+            <div class="action-buttons2">
+              <div class="text-button-wrapper" id="frameContainer">
+                <div id="signup" class="text-button53">Sign Up</div>
+              </div>
+              <button class="button40" id="login">
+                <div class="text33">Login</div>
+              </button>
+            </div>
+          </header>
+          <div class="login-wrapper">
+            <div class="login">
+              <div class="login-form">
+                <div class="heading-container">
+                  <h1 class="heading24">Login</h1>
+                </div>
+                <div class="paragraph23">
+                  Welcome back! Please log in to access your account.
+                </div>
+              </div>
+              <div class="input-fields1">
+                <div class="email-password-fields">
+                  <div class="input-field9">
+                    <input id="email"
+                      class="input-labels"
+                      placeholder="Enter your Email"
+                      type="text" required
+                    />
+                  </div>
+                  <div class="input-field10">
+                    <input id="password"
+                      class="text34"
+                      placeholder="Enter your Password"
+                      type="password" required
+                    />
+
+                    <div class="icon-wrapper5">
+                      <img
+                          class="icon67"
+                          alt="Toggle visibility"
+                          src="./public/icon7.svg"
+                          id="icon"
+                        />
+                    </div>
+                  </div>
+                </div>
+                <div class="login-actions">
+                  <div class="login-button-container">
+                    <div class="text-button54" id="textButton16" onclick="forgotPassword()">
+                      Forgot Password?
+                    </div>
+                  </div>
+                  <div class="alternative-login-options-wrapper">
+                    <div class="alternative-login-options">
+                      <button class="button41" type="button" onclick="login()">
+                        <div class="option-labels">Login</div>
+                      </button>
+                      <button class="button42" onclick="window.location.href='Signup.html';">
+                        <div class="text35">Sign Up</div>
+                      </button>
+                      <div class="social-login-area">
+                        <div class="separators">
+                          <div class="line18"></div>
+                        </div>
+                        <div class="divider-label">Or Continue with</div>
+                        <div class="separators1">
+                          <div class="line19"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="buttons-container-wrapper">
+                    <div class="buttons-container3">
+                      <div class="icon-container15">
+                        <button class="button43" id="google">
+                          <img
+                            class="icon68"
+                            alt=""
+                            src="./public/icon-110.svg"
+                          />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feature-list-wrapper">
+        <div class="feature-list1">
+          <div class="feature4">
+            <h1 class="heading25">
+              <span>Our</span>
+              <span class="testimonials2"> Testimonials</span>
+            </h1>
+            <div class="paragraph24">
+              Discover how MintBank has transformed lives with innovative
+              digital solutions and personalized customer service. See why our
+              clients trust us for a secure and prosperous financial journey
+            </div>
+          </div>
+          <div class="feature-details">
+            <div class="feature-action">
+              <div class="testimonial-button-container">
+              </div>
+              <div class="additional-details">
+                <div class="details-separator">
+                  <div class="name-separators">
+                    <div class="line20"></div>
+                  </div>
+                  <img class="icon72" alt="" src="./public/icon-25.svg" />
+
+                  <div class="name-separators1">
+                    <div class="line21"></div>
+                  </div>
+                </div>
+                <div class="paragraph25">
+                  MintBank has been my trusted financial partner for years.
+                  Their personalized service and innovative digital banking
+                  solutions have made managing my finances a breeze.
+                </div>
+                <div class="name6">Sara T</div>
+              </div>
+            </div>
+            <div class="feature-list-continued">
+              <div class="feature-item">
+                <div class="action-wrapper">
+                  <div class="previous-testimonial-button">
+                    <div class="detail-separator"></div>
+                    <div class="paragraph26">
+                      I recently started my own business, and MintBank has been
+                      instrumental in helping me set up my business accounts and
+                      secure the financing I needed. Their expert guidance and
+                      tailored solutions have been invaluable.
+                    </div>
+                    <div class="detail-highlight">
+                      <div class="highlight-content">
+                        <img class="icon73" alt="" src="./public/icon-25.svg" />
+
+                        <div class="main-content2">
+                          <div class="line22"></div>
+                        </div>
+                      </div>
+                      <div class="name7">John D</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="additional-feature-details">
+                  <div class="details-separator1">
+                    <div class="separators2">
+                      <div class="line23"></div>
+                    </div>
+                    <img class="icon74" alt="" src="./public/icon-25.svg" />
+
+                    <div class="separators3">
+                      <div class="line24"></div>
+                    </div>
+                  </div>
+                  <div class="paragraph27">
+                    I love the convenience of MintBank's mobile banking app. It
+                    allows me to stay on top of my finances and make
+                    transactions on the go. The app is user-friendly and secure,
+                    giving me peace of mind.
+                  </div>
+                  <div class="name8">Emily G</div>
+                </div>
+              </div>
+              <div class="highlight-divider-wrapper">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-section3">
+        <div class="footer-section-inner">
+          <div class="shape-30-group" id="frameContainer">
+            <img class="shape-30-icon7" alt="" src="./public/shape30.svg" />
+
+            <div class="mintbank-wrapper1">
+              <div class="mintbank7">MintBank</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-section-child">
+          <div class="text-button-group">
+            <div class="text-button55" id="homef">Home</div>
+            <div class="text-button56" id="aboutf">About</div>
+            <div class="text-button57" id="helpf">Help</div>
+            <div class="text-button59" id="securityf">Security</div>
+          </div>
+        </div>
+        <div class="footer-separators"></div>
+        <div class="footer-action-buttons-wrapper">
+          <div class="footer-action-buttons1">
+            <div class="button48">
+              <div class="icon-wrapper6">
+                <img class="icon76" alt="" src="./public/icon.svg" />
+              </div>
+              <div class="text-button60">MintBank@gmail.com</div>
+            </div>
+            <div class="button49">
+              <div class="icon-wrapper7">
+                <img class="icon77" alt="" src="./public/icon1.svg" />
+              </div>
+              <div class="text-button61">+213 91813 23 2309</div>
+            </div>
+            <div class="button50">
+              <div class="icon-wrapper8">
+                <img class="icon78" alt="" src="./public/icon2.svg" />
+              </div>
+              <div class="text-button62">ALGER_CENTRE</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-separators1"></div>
+        <div class="container36">
+          <div class="social-media-links2">
+            <button class="button51">
+              <img class="icon79" alt="" src="./public/icon3.svg" />
+            </button>
+            <button class="button52">
+              <img class="icon80" alt="" src="./public/icon4.svg" />
+            </button>
+            <button class="button53">
+              <img class="icon81" alt="" src="./public/icon5.svg" />
+            </button>
+          </div>
+          <div class="copyright2">
+            <div class="text36">MintBank All Rights Reserved</div>
+          </div>
+          <div class="footer-navigation">
+            <div class="footer-link">
+              <div class="text-button63">Privacy Policy</div>
+              <div class="separator"></div>
+              <div class="text-button64">Terms of Service</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      var icon = document.getElementById("icon");
+      if (icon) {
+        icon.addEventListener("click", function (e) {
+          var passwordInput = document.getElementById('password');
+    var icon = document.getElementById('icon');
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      icon.src = './public/icon-visible.png'; // Change to visible icon if you have one
+    } else {
+      passwordInput.type = 'password';
+      icon.src = './public/icon7.svg'; // Change back to the original icon
+    }
+        });
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('email').value = "";
+  });
+      
+      </script>
+      <script src="Scripts/login.js"></script>
+
+
+
+      
+
+      <script>
+
+
+document.getElementById("navigationInnerContainer").addEventListener("click", function() {
+        window.location.href = "index.html";
+    });
+
+      document.getElementById("home").addEventListener("click", function() {
+        window.location.href = "index.html";
+    });
+
+    document.getElementById("about").addEventListener("click", function() {
+        window.location.href = "About.html";
+    });
+    
+    document.getElementById("help").addEventListener("click", function() {
+        window.location.href = "Help.html";
+    });
+
+    document.getElementById("security").addEventListener("click", function() {
+        window.location.href = "Security.html";
+    });
+
+    document.getElementById("login").addEventListener("click", function() {
+            window.location.href = "Login.html";
+        });
+
+        document.getElementById("signup").addEventListener("click", function() {
+            window.location.href = "Signup.html";
+        });
+
+
+
+
+        document.getElementById("frameContainer").addEventListener("click", function() {
+        window.location.href = "index.html";
+        });
+
+    document.getElementById("homef").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("aboutf").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("helpf").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("securityf").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+        
+
+    
+    </script>
+  </body>
+</html>

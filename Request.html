@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/Request.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap"
+    />
+  </head>
+  <body>
+    <div id="main" class="send-and-request-r-desktop">
+      <header class="main-content">
+        <div class="primary-container">
+          <div class="content-area">
+            <nav class="navbar-w-account">
+              <div class="body-wrapper">
+                <div class="shape-30-parent" id="frameContainer">
+                  <img
+                    class="shape-30-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/shape30.svg"
+                  />
+
+                  <div class="sidebar">
+                    <div class="mintbank">MintBank</div>
+                  </div>
+                </div>
+              </div>
+              <nav class="header">
+                <nav class="action-buttons">
+                  <div class="text-button" id="home">Home</div>
+                  <div class="text-button1" id="about">About</div>
+                  <div class="text-button2" id="help" style="cursor: pointer;">Help</div>
+                  <div class="text-button4" id="security" style="cursor: pointer;">Security</div>
+                </nav>
+              </nav>
+              <div class="user-info">
+                <img
+                  class="profile-icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/profile@2x.png"
+                  id="profileImage"
+                />
+
+                <img
+                  class="notification-icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/notification@2x.png"
+                  id="notificationImage"
+                />
+
+                <button class="button">
+                  <div class="action-label" id="logoutb">Log Out</div>
+                </button>
+              </div>
+            </nav>
+          </div>
+          <div class="secondary-actions">
+            <div class="text-button5" id="send">Send</div>
+            <div class="text-button6" id="textButton6">Request</div>
+          </div>
+        </div>
+      </header>
+      <div class="divider">
+        <div class="line-wrapper">
+          <div class="line"></div>
+        </div>
+        <div id="dividers" class="dividers"></div>
+      </div>
+      <section class="form-container" id="userInputSection">
+        <div class="form-wrapper">
+          <div class="form-elements">
+            <h1 id="instruct" class="heading">Request payment from</h1>
+          </div>
+          <div class="sub-container">
+          <div class="input-field">
+            <input
+              class="user-input"
+              placeholder="Search by Username "
+              type="text"
+              autocomplete="off"
+              id="input"
+            />
+          </div> 
+          </div>
+          
+          <div class="container2" id="container2" style="display: none;">
+            <div class="user-name">People on MintBank</div>
+            <div  id="frameContainer2">
+              <!-- User profiles will be displayed here -->
+            </div>
+          </div>
+          <div class="submit-button-wrapper">
+            <button class="button1">
+              <div class="action-button-label">Next</div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+
+<section style="display: none;" id="amountInputSection">
+      <div class="send-step1-desktop">
+        <footer class="container42"  id="container42">
+          <div class="blank-profile-picture-973460-1-parent">
+            <img
+              class="blank-profile-picture-973460-1-icon"
+              loading="lazy"
+              alt=""
+              src="./public/blankprofilepicture973460-1280-cropped-1@2x.png"
+              id="image"
+            />
+  
+            <div class="frame-wrapper">
+              <div class="name-parent">
+                <div id="nextname" class="name9">NAME</div>
+                <div id="nextusername" class="username">@username</div>
+              </div>
+            </div>
+          </div>
+          <div class="container-inner">
+            <div class="inputforamount-parent">
+              <input id="inputforamount" type="text" class="inputforamount" placeholder="0.00" />
+              <div class="button-frame">
+                <div class="button72" id="buttonContainer">
+                  <select class="text50" id="currencySelect">
+                    <option value="ARS">ARS - Argentine Peso</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="BRL">BRL - Brazilian Real</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="DKK">DKK - Danish Krone</option>
+                            <option value="USD">USD - United States dollar</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+          <button id="finalstep" class="button73">
+            <div class="text51">Next</div>
+        </button>
+        <div class="text-button-container">
+          <h1 class="text-button95" id="cancelb">Cancel</h1>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="messagesuc" style="display:none;">
+      <div class="final-step-desktop">
+        <div class="container53">
+          <div class="name13" id="successMessage">You’ve sent $0.00 USD to Name</div>
+        </div>
+        <div class="button-wrapper5">
+          <button class="button81" onclick="location.reload();">
+            <div class="text65">Send More Money</div>
+          </button>
+        </div>
+      </div>
+    </section>
+  
+    
+
+
+      <!-- New section for amount input -->
+
+      <section class="footer-section">
+        <div class="footer-content">
+          <div class="logo-area" id="logof" style="cursor: pointer;">
+            <img class="shape-30-icon1" alt="" src="./public/shape30.svg" />
+
+            <div class="footer-logo">
+              <div class="mintbank1">MintBank</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="text-button-parent">
+            <div class="text-button7" id="homef">Home</div>
+            <div class="text-button8" id="aboutf" style="cursor: pointer;">About</div>
+            <div class="text-button9" id="helpf" style="cursor: pointer;">Help</div>
+            <div class="text-button11" id="securityf" style="cursor: pointer;">Security</div>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-actions">
+          <div class="button-parent">
+            <div class="button2">
+              <div class="icon-wrapper">
+                <img class="icon" alt="" src="./public/icon.svg" />
+              </div>
+              <div class="text-button12">MintBank@gmail.com</div>
+            </div>
+            <div class="button3">
+              <div class="icon-container">
+                <img class="icon1" alt="" src="./public/icon1.svg" />
+              </div>
+              <div class="text-button13">+213 91813 23 2309</div>
+            </div>
+            <div class="button4">
+              <div class="icon-frame">
+                <img class="icon2" alt="" src="./public/icon2.svg" />
+              </div>
+              <div class="text-button14">ALGER_CENTRE</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider1"></div>
+        <div class="container">
+          <div class="mobile-action-trio">
+            <div class="button5">
+              <img class="icon3" alt="" src="./public/icon3.svg" />
+            </div>
+            <div class="button6">
+              <img class="icon4" alt="" src="./public/icon4.svg" />
+            </div>
+            <div class="button7">
+              <img class="icon5" alt="" src="./public/icon5.svg" />
+            </div>
+          </div>
+          <div class="copyright">
+            <div class="text">MintBank All Rights Reserved</div>
+          </div>
+          <div class="footer-info">
+            <div class="info-links">
+              <div class="text-button15">Privacy Policy</div>
+              <div class="link-divider"></div>
+              <div class="text-button16">Terms of Service</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+      import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyBS-E-W1L3XK7stlVsS1c02FRzCBSA1zsE",
+          authDomain: "pfep-9ded1.firebaseapp.com",
+          projectId: "pfep-9ded1",
+          storageBucket: "pfep-9ded1.appspot.com",
+          messagingSenderId: "333176142301",
+          appId: "1:333176142301:web:afced671374fc979e35e34"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+    
+      window.addEventListener('load', () => {
+          console.log('Window loaded and Firebase initialized');
+    
+          document.getElementById('logoutb').addEventListener('click', async () => {
+              console.log('Logout button clicked');
+              try {
+                  await signOut(auth);
+                  console.log('User signed out successfully');
+                  window.location.href = 'index.html';
+              } catch (error) {
+                  console.error('Error signing out: ', error);
+                  alert('Error logging out');
+              }
+          });
+      });
+    </script>
+
+    <script>
+
+      
+// Select the elements
+var userInputSection = document.getElementById("userInputSection");
+var amountInputSection = document.getElementById("amountInputSection");
+var inputforamount = document.getElementById("inputforamount"); 
+var paymenttype = document.getElementById('paymenttype');
+
+      var cancelb = document.getElementById("cancelb");
+      if (cancelb) {
+        cancelb.addEventListener("click", function (e) {
+          userInputSection.style.display = "flex";
+          amountInputSection.style.display = "none";
+          inputForAmount.value = "0.00";
+        });
+      }
+
+      document.getElementById("home").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("about").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("help").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("security").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+
+        document.getElementById("homef").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("aboutf").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("helpf").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("securityf").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+        document.getElementById("send").addEventListener("click", function() {
+            window.location.href = "Send.html";
+        });
+
+        document.getElementById("frameContainer").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+      
+        document.getElementById("logof").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        var profileImage = document.getElementById("profileImage");
+      if (profileImage) {
+        profileImage.addEventListener("click", function (e) {
+          window.location.href = "Account.html";
+        });
+      }
+      
+      </script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-storage.js"></script>
+    <script type="module" src="Scripts/Request.js"></script>
+  </body>
+</html>

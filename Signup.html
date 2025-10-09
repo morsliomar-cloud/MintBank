@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/Signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&display=swap"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+  </head>
+  <body>
+    <div class="sign-up-page-desktop">
+      <div class="fade-out-left1"></div>
+      <section class="main">
+        <div class="content">
+          <header class="navbar">
+            <div class="logo1">
+              <div class="menu-items" id="menuItemsContainer">
+                <img
+                  class="shape-30-icon4"
+                  loading="lazy"
+                  alt=""
+                  src="./public/shape30.svg"
+                />
+
+                <div class="mintbank-container">
+                  <div class="mintbank4">MintBank</div>
+                </div>
+              </div>
+            </div>
+            <nav class="header1">
+              <nav class="header-buttons">
+                <div class="text-button32" id="home">Home</div>
+                <div class="text-button33" id="about">About</div>
+                <div class="text-button34" id="help">Help</div>
+                <div class="text-button36" id="security">Security</div>
+              </nav>
+            </nav>
+            <div class="signup">
+              <div class="signup-form">
+                <div class="text-button37" id="signup">Sign Up</div>
+              </div>
+              <button class="button24" id="login">
+                <div class="submit-label">Login</div>
+              </button>
+            </div>
+          </header>
+          <div class="content-area1">
+            <div class="sign-up">
+              <div class="header-content">
+                <div class="heading-group">
+                  <h1 class="heading22">Sign Up</h1>
+                  <img
+                    class="abstract-design-icon5"
+                    loading="lazy"
+                    alt=""
+                    src="./public/abstract-design1.svg"
+                  />
+                </div>
+                <div class="paragraph18">
+                  Join our community today! Create an account to unlock
+                  exclusive features and personalized experiences.
+                </div>
+              </div>
+              <form id="sign-up-form" class="form-area">
+                <div class="input-fields">
+                  <div class="container33">
+                    <div class="sub-container13">
+                      <div class="input-field1">
+                        <input id="first-name"
+                          class="label"
+                          placeholder="Enter First Name"
+                          type="text" required
+                        />
+                      </div>
+                      <div class="input-field2">
+                        <input id="last-name"
+                          class="placeholder"
+                          placeholder="Enter Last Name"
+                          type="text" required
+                        />
+                      </div>
+                    </div>
+                    <div class="sub-container14">
+                      <div class="input-field3">
+                        <input id="email"
+                          class="text24"
+                          placeholder="Enter your Email"
+                          type="email"
+                          required
+                        />
+                      </div>
+                      <div class="input-field4">
+                        <input
+                          class="text25"
+                          placeholder="Enter your Password"
+                          type="password"  
+                          id="passwordInput"  
+                          required
+                        />
+                      
+                        <img
+                          class="icon52"
+                          alt="Toggle visibility"
+                          src="./public/icon7.svg"
+                          id="icon"
+                        />
+                      </div>
+                    </div>
+                    <div class="sub-container15">
+                      <div class="input-field5">
+                        <select class="text26" name="country" id="countrySelect" required>
+                          <option value="" disabled selected>Choose A Country</option>
+                          <option value="Albania">Albania</option>
+                          <option value="Algeria">Algeria</option>
+                          <option value="Argentina">Argentina</option>
+                          <option value="Australia">Australia</option>
+                          <option value="Austria">Austria</option>
+                          <option value="Belgium">Belgium</option>
+                          <option value="Brazil">Brazil</option>
+                          <option value="Canada">Canada</option>
+                          <option value="China">China</option>
+                          <option value="Denmark">Denmark</option>
+                          <option value="United States">United States</option>
+                        </select>                        
+                      </div>
+                      
+                      
+                      
+                      <div class="input-field6">
+                        <select class="text27" name="currency" id="currencySelect" required>
+                          <option value="" disabled selected>Choose a Currency</option>
+                          option value="ALL">ALL - Albanian Lek</option>
+                            <option value="DZD">DZD - Algerian Dinar</option>
+                            <option value="ARS">ARS - Argentine Peso</option>
+                            <option value="AUD">AUD - Australian Dollar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="BRL">BRL - Brazilian Real</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="CNY">CNY - Chinese Yuan</option>
+                            <option value="DKK">DKK - Danish Krone</option>
+                            <option value="USD">USD - United States dollar</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="sub-container16">
+                      <div class="input-field8">
+                        <input id="username"
+                          class="text28"
+                          placeholder="Enter your Username"
+                          type="text" required/>
+                      </div>
+                    </div>
+                    <div class="sub-container16">
+                      <div class="input-text">
+                        <div class="zone-code-container">
+                          <span class="fixed-plus">+</span>
+                          <input id="country-code" class="input-field7" placeholder="213" type="text" maxlength="3" pattern="[0-9]*" required>
+                        </div>
+                      </div>
+
+                      <div class="input-field8">
+                        <input id="phone-number"
+                          class="text28"
+                          placeholder="Enter your Phone Number"
+                          type="text"
+                          pattern="[0-9]*"
+                          maxlength="10" required/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="action-area">
+                  <div class="action-buttons1">
+                    <button id="submit" type="submit" class="button25">
+                      <div class="action-button-label1">Sign Up</div>
+                    </button>
+                    <button id="login" class="button26">
+                      <div class="text29">Login</div>
+                    </button>
+                    <div class="social-login">
+                      <div class="divider1">
+                        <div class="line10"></div>
+                      </div>
+                      <div class="text30">Or Continue with</div>
+                      <div class="divider2">
+                        <div class="line11"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="social-area">
+                  <div class="buttons-container2">
+                    <div class="icon-container12">
+                      <button id="google" class="button27">
+                        <img
+                          class="icon53"
+                          alt=""
+                          src="./public/icon-110.svg"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="info-content-wrapper">
+        <div class="info-content">
+          <div class="container34">
+            <div class="text-container9">
+              <h1 class="heading23">
+                <span>Our</span>
+                <span class="testimonials1"> Testimonials</span>
+              </h1>
+              <div class="paragraph19">
+                Lorem ipsum dolor sit amet consectetur. Blandit odio semper
+                risus pellentesque elit. Pellentesque eget ut imperdiet nulla
+                penatibus. Nascetur viverra arcu sed amet cursus purus.
+              </div>
+            </div>
+            <div class="tabs1">
+              <button class="button30">
+                <div class="tab-label">For Individuals</div>
+              </button>
+            </div>
+          </div>
+          <div class="feature-list">
+            <div class="feature">
+            </div>
+            <div class="feature-detail">
+              <div class="detail-content">
+                <div class="feature-divider">
+                  <div class="divider-wrapper">
+                    <div class="line12"></div>
+                  </div>
+                  <img class="icon57" alt="" src="./public/icon-25.svg" />
+
+                  <div class="divider-wrapper1">
+                    <div class="line13"></div>
+                  </div>
+                </div>
+                <div class="paragraph20">
+                  MintBank has been my trusted financial partner for years.
+                  Their personalized service and innovative digital banking
+                  solutions have made managing my finances a breeze.
+                </div>
+                <div class="name3">Sara T</div>
+              </div>
+            </div>
+            <div class="feature1">
+              <div class="detail-content1">
+                <div class="feature-divider1">
+                  <div class="divider-wrapper2">
+                    <div class="detail-icon-wrapper">
+                      <div class="detail-icon"></div>
+                    </div>
+                    <img class="icon58" alt="" src="./public/icon-25.svg" />
+
+                    <div class="line-frame">
+                      <div class="line14"></div>
+                    </div>
+                  </div>
+                  <div class="paragraph21">
+                    I recently started my own business, and MintBank has been
+                    instrumental in helping me set up my business accounts and
+                    secure the financing I needed. Their expert guidance and
+                    tailored solutions have been invaluable.
+                  </div>
+                  <div class="name4">John D</div>
+                </div>
+              </div>
+              <div class="feature2">
+                <div class="feature-divider2">
+                  <div class="divider-wrapper3">
+                    <div class="line15"></div>
+                  </div>
+                  <img class="icon59" alt="" src="./public/icon-25.svg" />
+
+                  <div class="divider-wrapper4">
+                    <div class="line16"></div>
+                  </div>
+                </div>
+                <div class="paragraph22">
+                  I love the convenience of MintBank's mobile banking app. It
+                  allows me to stay on top of my finances and make transactions
+                  on the go. The app is user-friendly and secure, giving me
+                  peace of mind.
+                </div>
+                <div class="name5">Emily G</div>
+                <div class="fade-out-right1"></div>
+              </div>
+            </div>
+            <div class="feature3">
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer-section2">
+        <div class="footer-logo1">
+          <div class="logo-wrapper" id="logoWrapperContainer">
+            <img class="shape-30-icon5" alt="" src="./public/shape30.svg" />
+
+            <div class="mintbank-frame">
+              <div class="mintbank5">MintBank</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-buttons">
+            <div class="text-button38" id="homef">Home</div>
+            <div class="text-button39" id="aboutf">About</div>
+            <div class="text-button40" id="helpf">Help</div>
+            <div class="text-button42" id="securityf">Security</div>
+          </div>
+        </div>
+        <div class="footer-divider2"></div>
+        <div class="footer-actions1">
+          <div class="footer-action-buttons">
+            <div class="button34">
+              <div class="footer-action-icon">
+                <img class="icon61" alt="" src="./public/icon.svg" />
+              </div>
+              <div class="text-button43">MintBank@gmail.com</div>
+            </div>
+            <div class="button35">
+              <div class="icon-wrapper3">
+                <img class="icon62" alt="" src="./public/icon1.svg" />
+              </div>
+              <div class="text-button44">+213 91813 23 2309</div>
+            </div>
+            <div class="button36">
+              <div class="icon-wrapper4">
+                <img class="icon63" alt="" src="./public/icon2.svg" />
+              </div>
+              <div class="text-button45">ALGER_CENTRE</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-divider3"></div>
+        <div class="container35">
+          <div class="social-media-links1">
+            <button class="button37">
+              <img class="icon64" alt="" src="./public/icon3.svg" />
+            </button>
+            <button class="button38">
+              <img class="icon65" alt="" src="./public/icon4.svg" />
+            </button>
+            <button class="button39">
+              <img class="icon66" alt="" src="./public/icon5.svg" />
+            </button>
+          </div>
+          <div class="copyright1">
+            <div class="text32">MintBank All Rights Reserved</div>
+          </div>
+          <div class="footer-links2">
+            <div class="footer-link-buttons">
+              <div class="text-button46">Privacy Policy</div>
+              <div class="line17"></div>
+              <div class="text-button47">Terms of Service</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+
+
+        const loginButton = document.getElementById('login');
+            loginButton.addEventListener('click', () => {
+            window.location.href = 'Login.html';
+                    });
+
+      
+      var icon = document.getElementById("icon");
+      if (icon) {
+        icon.addEventListener("click", function (e) {
+          var passwordInput = document.getElementById('passwordInput');
+    var icon = document.getElementById('icon');
+    if (passwordInput.type === 'password') {
+      passwordInput.type = 'text';
+      icon.src = './public/icon-visible.png'; // Change to visible icon if you have one
+    } else {
+      passwordInput.type = 'password';
+      icon.src = './public/icon7.svg'; // Change back to the original icon
+    }
+        });
+      }
+      
+       // Reset dropdown to default option on page load
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('countrySelect').selectedIndex = 0;
+  });
+
+
+  // Reset dropdown to default option on page load
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('currencySelect').selectedIndex = 0;
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('first-name').value = "";
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('last-name').value = "";
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('username').value = "";
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('email').value = "";
+  });
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('country-code').value = "";
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById('phone-number').value = "";
+  });
+
+  document.getElementById("menuItemsContainer").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("home").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("about").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("help").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("security").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+
+        document.getElementById("login").addEventListener("click", function() {
+            window.location.href = "Login.html";
+        });
+
+        document.getElementById("signup").addEventListener("click", function() {
+            window.location.href = "Signup.html";
+        });
+
+        document.getElementById("homef").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("aboutf").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("helpf").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("securityf").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+
+        document.getElementById("logoWrapperContainer").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+      </script>
+      <script type="module" src="Scripts/Signup.js" defer></script>
+  </body>
+</html>

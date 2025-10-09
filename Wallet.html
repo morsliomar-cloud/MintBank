@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/Wallet.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js"></script>
+    <script type="module" src="Scripts/wallet.js"></script>
+  </head>
+  <body>
+    <div class="sdd-desktop">
+      <section class="sdd-desktop-inner">
+        <div class="navbar-w-account-parent">
+          <header class="navbar-w-account4">
+            <div class="navbar-w-account-inner">
+              <div id="logo" class="shape-30-parent5" style="cursor: pointer;">
+                <img
+                  class="shape-30-icon17"
+                  loading="lazy"
+                  alt=""
+                  src="./public/shape30.svg"
+                />
+
+                <div class="mintbank-wrapper2">
+                  <div class="mintbank12">MintBank</div>
+                </div>
+              </div>
+            </div>
+            <nav class="navbar-w-account-child">
+              <nav class="frame-nav">
+                <div id="home" class="text-button111" style="cursor: pointer;">Home</div>
+                <div id="about" class="text-button112" style="cursor: pointer;">About</div>
+                <div id="help" class="text-button113" style="cursor: pointer;">Help</div>
+                <div id="security" class="text-button115" style="cursor: pointer;">Security</div>
+              </nav>
+            </nav>
+            <div class="profile-group">
+              <img
+                class="profile-icon4"
+                loading="lazy"
+                alt=""
+                src="./public/profile@2x.png"
+                id="profileImage"
+              />
+
+              <img
+                class="notification-icon4"
+                loading="lazy"
+                alt=""
+                src="./public/notification@2x.png"
+              />
+
+              <button class="button82" id="logoutb">
+                <div class="text66">Log Out</div>
+              </button>
+            </div>
+          </header>
+          <div class="frame-wrapper2" id="c1">
+            <div class="frame-parent3">
+              <div class="frame-parent4">
+                <div class="credit-card-6828653-1-wrapper">
+                  <img
+                    class="credit-card-6828653-1-icon"
+                    loading="lazy"
+                    alt=""
+                    src="./public/creditcard-6828653-1@2x.png"
+                  />
+                </div>
+                <div class="heading-wrapper2">
+                  <h1 class="heading37">Link a new card</h1>
+                </div>
+                <div class="text-button116">
+                  Join the millions of customers who use MintBank to pay for
+                  everyday purchases any time, any day, anywhere.
+                </div>
+              </div>
+              <div class="button-wrapper6">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="frame-section">
+        <div class="line32" id="line"></div>
+        <div class="section2">
+          <div class="left-side">
+            <div class="actions-container">
+              <div class="button-containe">
+                <img
+                id="addb"
+                  class="add-bank-icon1"
+                  loading="lazy"
+                  alt=""
+                  src="./public/add-bank-icon1@2x.png"
+                />
+
+                <div class="link-a-bank">Link a bank</div>
+              </div>
+              <div class="button-containe1">
+                <img
+                id="addc"
+                  class="image-1-icon"
+                  loading="lazy"
+                  alt=""
+                  src="./public/image-11@2x.png"
+                />
+
+                <div class="link-a-card">Link a card</div>
+              </div>
+            </div>
+            <div class="cards-and-bankds">
+              <div class="default-opt">
+                <img
+                  class="shape-30-icon18"
+                  alt=""
+                  src="./public/shape30-1.svg"
+                />
+
+                <div class="payment-method-info" id="payment-method-info">
+                  <div class="name">MintBank balance</div>
+                  <div class="info" id="balance">0.00 USD Available</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="right-side">
+            <img
+              class="image-2-icon"
+              loading="lazy"
+              alt=""
+              src="./public/image-2@2x.png"
+            />
+
+            <div class="name">[BankName] •••XXXX</div>
+            <div class="button-parent1">
+              <button class="button84">
+                <div class="text68">Update Account</div>
+              </button>
+              <button class="button85">
+                <div class="text69">Remove Account</div>
+              </button>
+            </div>
+          </div> New section for amount input -->
+        </div>
+      </section>
+      <footer class="footer-section6">
+        <div class="footer-section-inner1">
+          <div id="logof" class="shape-30-parent6" style="cursor: pointer;">
+            <img class="shape-30-icon19" alt="" src="./public/shape30.svg" />
+
+            <div class="mintbank-wrapper3">
+              <div class="mintbank13">MintBank</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-section-inner2">
+          <div class="text-button-parent5">
+            <div id="homef" class="text-button117" style="cursor: pointer;">Home</div>
+            <div id="aboutf" class="text-button118" style="cursor: pointer;">About</div>
+            <div id="helpf" class="text-button119" style="cursor: pointer;">Help</div>
+            <div id="securityf" class="text-button121" style="cursor: pointer;">Security</div>
+          </div>
+        </div>
+        <div class="line33"></div>
+        <div class="footer-section-inner3">
+          <div class="button-parent2">
+            <div class="button86">
+              <div class="icon-wrapper13">
+                <img
+                  class="icon94"
+                  loading="lazy"
+                  alt=""
+                  src="./public/icon.svg"
+                />
+              </div>
+              <div class="text-button122">MintBank@gmail.com</div>
+            </div>
+            <div class="button87">
+              <div class="icon-wrapper14">
+                <img class="icon95" alt="" src="./public/icon1.svg" />
+              </div>
+              <div class="text-button123">+213 91813 23 2309</div>
+            </div>
+            <div class="button88">
+              <div class="icon-wrapper15">
+                <img class="icon96" alt="" src="./public/icon2.svg" />
+              </div>
+              <div class="text-button124">ALGER_CENTRE</div>
+            </div>
+          </div>
+        </div>
+        <div class="line34"></div>
+        <div class="container54">
+          <div class="button-parent3">
+            <div class="button89">
+              <img class="icon97" alt="" src="./public/icon3.svg" />
+            </div>
+            <div class="button90">
+              <img class="icon98" alt="" src="./public/icon4.svg" />
+            </div>
+            <div class="button91">
+              <img class="icon99" alt="" src="./public/icon5.svg" />
+            </div>
+          </div>
+          <div class="text-wrapper1">
+            <div class="text70">MintBank All Rights Reserved</div>
+          </div>
+          <div class="container-inner3">
+            <div class="text-button-parent6">
+              <div class="text-button125">Privacy Policy</div>
+              <div class="line35"></div>
+              <div class="text-button126">Terms of Service</div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+      import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
+    
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+          apiKey: "AIzaSyBS-E-W1L3XK7stlVsS1c02FRzCBSA1zsE",
+          authDomain: "pfep-9ded1.firebaseapp.com",
+          projectId: "pfep-9ded1",
+          storageBucket: "pfep-9ded1.appspot.com",
+          messagingSenderId: "333176142301",
+          appId: "1:333176142301:web:afced671374fc979e35e34"
+      };
+    
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+    
+      window.addEventListener('load', () => {
+          console.log('Window loaded and Firebase initialized');
+    
+          document.getElementById('logoutb').addEventListener('click', async () => {
+              console.log('Logout button clicked');
+              try {
+                  await signOut(auth);
+                  console.log('User signed out successfully');
+                  window.location.href = 'index.html';
+              } catch (error) {
+                  console.error('Error signing out: ', error);
+                  alert('Error logging out');
+              }
+          });
+      });
+    </script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        const defaultOpt = document.querySelector('.default-opt');
+        const cardbankContainers = document.querySelectorAll('.cardbank-container');
+    
+        cardbankContainers.forEach(container => {
+          container.addEventListener('click', () => {
+            // Remove the border from default-opt
+            defaultOpt.style.border = 'none';
+    
+            // Remove 'clicked' class from all cardbank containers
+            cardbankContainers.forEach(c => c.classList.remove('clicked'));
+    
+            // Add 'clicked' class to the clicked container
+            container.classList.add('clicked');
+          });
+        });
+      });
+    </script>
+
+
+<script>
+  document.getElementById("addc").addEventListener("click", function() {
+            window.location.href = "Addcard.html";
+        });
+        document.getElementById("addb").addEventListener("click", function() {
+            window.location.href = "Addbank.html";
+        });
+
+        document.getElementById("home").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("about").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("help").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("security").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+
+        document.getElementById("homef").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("aboutf").addEventListener("click", function() {
+            window.location.href = "About.html";
+        });
+        
+        document.getElementById("helpf").addEventListener("click", function() {
+            window.location.href = "Help.html";
+        });
+
+        document.getElementById("securityf").addEventListener("click", function() {
+            window.location.href = "Security.html";
+        });
+
+        document.getElementById("logo").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        document.getElementById("logof").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+        var profileImage = document.getElementById("profileImage");
+      if (profileImage) {
+        profileImage.addEventListener("click", function (e) {
+          window.location.href = "Account.html";
+        });
+      }
+</script>
+    
+    
+  </body>
+</html>
