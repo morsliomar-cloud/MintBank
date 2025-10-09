@@ -20,7 +20,7 @@
   white-space: nowrap;
 }
 .mintbank-wrapper5 {
-  width: 544.1px;
+  width: 460px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -2498,10 +2498,9 @@
 }
 @media screen and (max-width: 1500px) {
   .navbar-inner {
-    display: none;
+ 
   }
   .navbar2 {
-    width: 948.2000000000008px;
   }
   .sub-container31 {
     flex-wrap: wrap;

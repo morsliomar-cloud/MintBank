@@ -371,7 +371,7 @@
   gap: var(--gap-7xl);
 }
 .navbar-child {
-  width: 518.3px;
+  width: 434.3px;
   flex-direction: column;
   padding: var(--padding-sm) 0 0;
   box-sizing: border-box;
