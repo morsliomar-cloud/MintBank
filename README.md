@@ -52,7 +52,6 @@ Admin.html
 ## Firebase Config (client SDK)
 
 ```js
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBS-E-W1L3XK7stlVsS1c02FRzCBSA1zsE",
   authDomain: "pfep-9ded1.firebaseapp.com",
