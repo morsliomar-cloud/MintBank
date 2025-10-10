@@ -1,0 +1,49 @@
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() { return request.auth != null; }
+    function isOwner(uid) { return isSignedIn() && request.auth.uid == uid; }
+
+    // Users
+    match /users/{uid} {
+      // Only the owner can read/update/delete their user doc.
+      allow read, update, delete: if isOwner(uid);
+      // Create only by the signed-in user for themselves
+      allow create: if isSignedIn() && request.resource.data.uid == request.auth.uid;
+
+      // Subcollection: Transactions (append-only; owner only)
+      match /Transactions/{txId} {
+        allow read: if isOwner(uid);
+        allow create: if isOwner(uid) && request.resource.data.sender == uid;
+        allow update, delete: if false;
+      }
+
+      // Subcollection: Bank Accounts (no sensitive fields)
+      match /bankAccounts/{bankId} {
+        allow read, write: if isOwner(uid)
+          && !request.resource.data.keys().hasAny(['accountNumber','routingNumber','cvv','cardNumber']);
+      }
+
+      // Subcollection: Cards (only safe fields allowed)
+      match /cards/{cardId} {
+        allow read, write: if isOwner(uid)
+          && !request.resource.data.keys().hasAny(['cardNumber','cvv','accountNumber','routingNumber'])
+          && request.resource.data.keys().hasAll(['cardType','last4'])
+          && (request.resource.data.expMonth == null || (request.resource.data.expMonth >= 1 && request.resource.data.expMonth <= 12))
+          && (request.resource.data.expYear == null || request.resource.data.expYear >= 2023);
+      }
+    }
+
+    // Public reference data: currencies (read-only)
+    match /currensies/{id} {
+      allow read: if true;
+      allow write: if false;
+    }
+    // If you rename to 'currencies', duplicate the rule:
+    match /currencies/{code} {
+      allow read: if true;
+      allow write: if false;
+    }
+  }
+}
