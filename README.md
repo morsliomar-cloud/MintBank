@@ -41,7 +41,7 @@ Request.html
 Activity.html
 ProfileSettings.html
 AddBank.html
-AddCard.html   # consider renaming to AddCard.html
+AddCard.html  
 Security.html
 Help.html
 Admin.html
