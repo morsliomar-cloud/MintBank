@@ -10,21 +10,6 @@
 
 ---
 
-## ⚠️ Security First (must‑read)
-
-Your current Firestore rules were **wide‑open** (`allow read, write: if true;`). **Immediately** replace them with the stricter rules in [`FIRESTORE_RULES_STRICT.rules`](./FIRESTORE_RULES_STRICT.rules) and deploy:
-
-```bash
-npm i -g firebase-tools
-firebase login
-firebase init firestore   # choose your project; point rules to FIRESTORE_RULES_STRICT.rules
-firebase deploy --only firestore:rules
-```
-
-**Data safety:** Never store real card PANs, CVV, or full bank account numbers in Firestore. Store **only** non‑sensitive, derived values (e.g., `last4`, `expMonth`, `expYear`, `accountNumberSuffix`). See **Data Model (Recommended)** and **Migration** sections below.
-
----
-
 ## Features
 
 - Auth: Email/Password + Google (password reset + email verification enabled)
