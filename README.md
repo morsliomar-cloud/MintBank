@@ -1,7 +1,7 @@
 
-# MintBank — E‑Banking Demo (Personalized)
+# MintBank — E‑Banking Demo
 
-> Front‑end e‑banking **demo** built with HTML/CSS/JS and Firebase (Auth + Firestore). This README is tailored to your current project setup.
+> Front‑end e‑banking **demo** built with HTML/CSS/JS and Firebase (Auth + Firestore). 
 
 **Live demo:** [https://morsliomar-cloud.github.io/MintBank/](https://morsliomar-cloud.github.io/MintBank/)  
 **Repo:** [https://github.com/morsliomar-cloud/MintBank](https://github.com/morsliomar-cloud/MintBank)  
