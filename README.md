@@ -123,14 +123,6 @@ See [`FIRESTORE_RULES_STRICT.rules`](./FIRESTORE_RULES_STRICT.rules) for a compl
 
 ---
 
-## Local Preview
-
-```bash
-# any static server works
-python3 -m http.server 5173
-# visit http://localhost:5173
-```
-
 ## Credits & License
 
 Academic demonstration only; do **not** use with real banking data.  
